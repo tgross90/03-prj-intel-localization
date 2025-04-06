@@ -1,0 +1,199 @@
+/* Add your CSS here */
+
+/* Set the background color for the entire webpage */
+/* Add your CSS here */
+
+/* Add your CSS here */
+
+/* Set the background color for the entire webpage */
+body {
+  background-color: #0071C5 !important; /* Intel blue */
+  color: #fff !important; /* Ensure text is readable on the blue background */
+  margin: 0; /* Remove default margin */
+  font-family: 'Intel One Mono', monospace; /* Use Intel One Mono font */
+  direction: rtl; /* Set the text and layout direction to right-to-left */
+}
+
+/* Timeline Section */
+.timeline {
+  padding: 16px;
+  justify-content: center; /* Center cards horizontally */
+}
+
+/* Timeline Card */
+.timeline-card {
+  background-color: #005ea6; /* Light background for contrast */
+  border: 1px solid #ddd; /* Subtle border for definition */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  padding: 16px;
+  width: auto; /* Allow the card to adjust its width dynamically */
+  min-width: 171px; /* Ensure a minimum width */
+  max-width: 250px; /* Optional: Set a maximum width */
+  text-align: center; /* Center-align text */
+  transition: transform 0.3s, box-shadow 0.3s; /* Remove width transition */
+  word-wrap: break-word; /* Ensure long words break properly */
+  cursor: pointer; /* Indicate interactivity */
+  margin: 5 px;
+}
+
+.timeline-card:focus {
+  outline-offset: 4px; /* Offset the outline for better visibility */
+}
+
+/* Hover Effect - Only the hovered card lengthens */
+.timeline-card:hover {
+  transform: scale(1.05); /* Slightly enlarge card */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhance shadow */
+  z-index: 1; /* Bring the hovered card to the front */
+}
+
+/* Ensure other cards remain unaffected */
+.timeline-card:not(:hover) {
+  transform: scale(1); /* Reset scale for non-hovered cards */
+}
+
+/* Card Image */
+.timeline-card img {
+  max-width: 100%; /* Ensure images fit within the card */
+  height: 100px; /* Set a fixed height for consistency */
+  width: 250px;
+  object-fit: cover; /* Ensure the image scales properly without distortion */
+  border-radius: 4px; /* Slight rounding for images */
+  margin-bottom: 8px; /* Space below image */
+}
+
+.timeline-card img:focus {
+  outline: 2px solid #ffffff; /* Add focus outline for images */
+  outline-offset: 4px;
+}
+
+/* Card Headings */
+.timeline-card h2 {
+  font-size: 1.5em;
+  color: #ffffff; 
+  margin-bottom: 8px;
+}
+
+.timeline-card h3 {
+  font-size: 1.2em;
+  color: #ffffff; /* Darker text for contrast */
+  margin-bottom: 8px;
+}
+
+/* Hide paragraph text by default */
+.timeline-card p {
+  display: none; /* Hide the text */
+}
+
+/* Show paragraph text on hover */
+.timeline-card:hover p {
+  display: block; /* Display the text when the card is hovered */
+}
+
+/* Center the text below the timeline */
+.timeline + p {
+  text-align: center; /* Center-align the text */
+  margin-top: 16px; /* Add spacing above the text */
+  font-size: 1em; /* Default font size */
+}
+
+/* Responsive Design for the text below the timeline */
+@media (min-width: 768px) {
+  .timeline + p {
+    font-size: 1.2em; /* Increase font size on larger screens */
+  }
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .timeline {
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+}
+
+/* Hero Section */
+header div {
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center elements horizontally */
+  text-align: center; /* Center text */
+  padding: 16px; /* Add padding for spacing */
+}
+
+header img {
+  max-width: 40%; /* Reduce the width to 40% for a smaller logo */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 16px; /* Space below the logo */
+}
+
+header h1 {
+  font-size: 2em; /* Adjust heading size for better readability */
+  margin-bottom: 8px; /* Space below the heading */
+}
+
+header p {
+  font-size: 1em; /* Adjust paragraph size for readability */
+  line-height: 1.5; /* Improve text spacing */
+  max-width: 600px; /* Limit width for better readability */
+  margin: 0 auto; /* Center the paragraph */
+}
+
+/* Responsive Design for Hero Section */
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 2.5em; /* Increase heading size on larger screens */
+  }
+
+  header p {
+    font-size: 1.2em; /* Increase paragraph size on larger screens */
+  }
+}
+
+/* Customize the scroll bar */
+::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+  height: 10px; /* Set the height of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00c7fd; /* Set the color of the scrollbar thumb */
+  border-radius: 15px; /* Add rounded corners to the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #005ea6; /* Darken thumb on hover for better visibility */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ffffff; /* Set the color of the scrollbar track */
+}
+
+/* Subscription Form Section */
+.subscription-form .card {
+  background-color: #005ea6; /* Match the timeline card background */
+  color: #ffffff; /* White text for contrast */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.subscription-form .form-control {
+  border-radius: 4px; /* Rounded input field */
+  border: 1px solid #ddd; /* Subtle border */
+}
+
+.subscription-form .btn-primary {
+  background-color: #005ea6; 
+  border: 2px solid #ffffff; /* Add a white border */
+  color: #ffffff; 
+  font-weight: bold; /* Make the text bold */
+}
+
+.subscription-form .btn-primary:hover {
+  background-color: #005ea6; /* Match the hover effect of the scrollbar thumb */
+  border: 2px solid #92e2f9; /* Add a white border */
+  color: #92e2f9; /* Change text color to white on hover */
+}
+
+
